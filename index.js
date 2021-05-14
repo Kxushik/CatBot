@@ -8,17 +8,20 @@ client.on("ready", () => {
 })
 
 client.on("message", msg => {
-  let process = getRandomInt(10);
+  let process = getRandomInt(20);
   console.log(process + "-"+msg.content);
   
-  if (process < 1) {
+  if (process === 1) {
     if(!msg.content.split("").includes("*")){
       msg.reply("*"+replies[getRandomInt(replies.length)]+"*");
     }
     
   }
   if(msg.content === "linda?"){
-    msg.reply("Whats up big dog-- I mean *meow*");
+    msg.reply("*"+replies[getRandomInt(replies.length)]+"*");
+  }
+  if(msg.content === "linda baka"){
+    msg.reply("*baka baka baaaakaaa*");
   }
 })
 
